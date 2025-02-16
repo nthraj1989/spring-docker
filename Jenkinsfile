@@ -7,7 +7,7 @@ pipeline {
     }
 
     stages {
-        stage('code checckout') {
+        stage('code checkout') {
             steps {
                 // Get some code from a GitHub repository
                 git 'https://github.com/nthraj1989/spring-docker.git'
