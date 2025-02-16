@@ -9,8 +9,9 @@ pipeline {
     stages {
         stage('code checkout') {
             steps {
-                // Get some code from a GitHub repository
-                git 'https://github.com/nthraj1989/spring-docker.git'
+               steps{
+                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/nthraj1989/spring-docker.git']])
+               }
             }
         }
 
